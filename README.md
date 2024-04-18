@@ -5,5 +5,4 @@ Desarrollo de Aplicaciones y Servicios Web.
 Chen-P-Luci
 
 Así luce home hasta el momento:
-![image](https://github.com/lucidotbat/Equipo-Estrella/assets/98113987/578a1a41-cfea-4e41-af5e-0abb931bd318)
-
+![image](https://github.com/lucidotbat/Equipo-Estrella/assets/98113987/258c3438-6ae2-4895-816d-a02f7b03fc1d)
