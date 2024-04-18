@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/views/styles/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/e0f2326382.js" crossorigin="anonymous"></script>   
+    </head>
+    <body>
+<!--AQUI EMPIEZA EL CUERPO DE LA PAGINA-->
+
+<!--INICIO NAVBAR-->
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color:lightgrey; height: 80px;">
+        <a href="home.html" class="navbar-brand" href="#" style="margin-left:5px">
+            <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#myModal1" style="background-color:transparent; border-style: hidden;" >
+                <img src="/views/img/logo.png" class="w-100 d-block" alt="First slide" style="height:80px; padding-left:40px;">
+            </button>
+        </a>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="home.html" aria-current="page" style="color:black; font-size:18px;">Inicio<span class="visually-hidden">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="P01_about_us.html" aria-current="page" style="color:grey; font-size:18px;">Sobre nosotros<span class="visually-hidden">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:grey; font-size:18px; margin-right:15px;">Productos</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="P01_cat_B.html">Latino</a>
+                        <a class="dropdown-item" href="P01_cat_A.html">Hip Hop</a>
+                    </div>
+                </li>
+                <form class="d-flex text-start">
+                    <input class="form-control me-sm-2" type="text" placeholder="Buscar productos" style="height:40px; font-size:18px;">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="height:40px; font-size:18px;">Buscar</button>
+                </form>
+            </ul>
+            <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalId" style="background-color:transparent; border-style: hidden; margin-right:6px; color:black;">
+                <i class="fa-solid fa-user" style="margin-right:5px;"></i>
+                Ingresar
+            </button>
+            <a href="shopping_cart.html"><button type="button" class="btn btn-primary btn-lg" data-bs-toggle="myModal" data-bs-target="#modalId2" style="background-color:transparent; border-style: hidden; margin-right:30px;" >
+                <i class="fa-solid fa-cart-shopping" style="color: black;" ></i>
+            </button></a>
+        </div>
+    </nav>
+<!--FIN NAVBAR-->
+
+<!--INICIO CAROUSEL-->
+    <div id="myFirstCarousel" class="carousel slide" data-bs-ride="carousel" style="width:100%; height:300px;">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#myFirstCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+            <li data-bs-target="#myFirstCarousel" data-bs-slide-to="1" aria-label="Second slide"></li>
+            <li data-bs-target="#myFirstCarousel" data-bs-slide-to="2" aria-label="Third slide"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <img src="/views/img/car2.jpg" class="imagenCarousel" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img src="/views/img/car1.jpg" class="imagenCarousel" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img src="/views/img/car3.jpg" class="imagenCarousel" alt="Third slide">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myFirstCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myFirstCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+<!--FIN CAROUSEL-->
+
+<!--INICIO CARTAS-->
+    <div class="container" style="width:80%;">
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div>
+                <div class="card" style="margin:10px; width:100%">
+                    <img class="card-img-top" src="/views/img/ksg.jpg" alt="KSG">
+                    <div class="card-body">
+                        <h4 class="card-title">Kids See Ghosts</h4>
+                        <p class="card-text">Kids See Ghosts, Kanye West</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div>
+                <div class="card" style="margin:10px; width:100%">
+                    <img class="card-img-top" src="/views/img/ltf.jpg" alt="KSG">
+                    <div class="card-body">
+                        <h4 class="card-title">Larger Than Life</h4>
+                        <p class="card-text">Brent Faiyaz</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div>
+                <div class="card" style="margin:10px; width:100%">
+                    <img class="card-img-top" src="/views/img/ebt.jpg" alt="KSG">
+                    <div class="card-body">
+                        <h4 class="card-title">I've Tried Everything But Therapy (Part 1)</h4>
+                        <p class="card-text">Teddy Swims</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div>
+                <div class="card" style="margin:10px; width:100%">
+                    <img class="card-img-top" src="/views/img/utopia.jpg" alt="KSG">
+                    <div class="card-body">
+                        <h4 class="card-title">Utopia</h4>
+                        <p class="card-text">Travis Scott</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div>
+                <div class="card" style="margin:10px; width:100%">
+                    <img class="card-img-top" src="/views/img/nslqvapm.jpg" alt="KSG">
+                    <div class="card-body">
+                        <h4 class="card-title">nadie sabe lo que va a pasar mañana</h4>
+                        <p class="card-text">Bad Bunny</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div>
+                <div class="card" style="margin:10px; width:100%">
+                    <img class="card-img-top" src="/views/img/vultures.jpg" alt="KSG">
+                    <div class="card-body">
+                        <h4 class="card-title">Vultures</h4>
+                        <p class="card-text">Kanye West, Ty Dolla $ign</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div>
+                <div class="card" style="margin:10px; width:100%">
+                    <img class="card-img-top" src="/views/img/ss.jpg" alt="KSG">
+                    <div class="card-body">
+                        <h4 class="card-title">Stick Season</h4>
+                        <p class="card-text">Noah Kahan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div>
+                <div class="card" style="margin:10px; width:100%">
+                    <img class="card-img-top" src="/views/img/damn.jpg" alt="KSG">
+                    <div class="card-body">
+                        <h4 class="card-title">DAMN</h4>
+                        <p class="card-text">Kendrick Lamar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div>
+                <div class="card" style="margin:10px; width:100%">
+                    <img class="card-img-top" src="/views/img/ferxxo.jpg" alt="KSG">
+                    <div class="card-body">
+                        <h4 class="card-title">FERXXOCALIPSIS</h4>
+                        <p class="card-text">Feid</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div>
+                <div class="card" style="margin:10px; width:100%">
+                    <img class="card-img-top" src="/views/img/muerte.jpg" alt="KSG">
+                    <div class="card-body">
+                        <h4 class="card-title">Muerte</h4>
+                        <p class="card-text">Canserbero</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div>
+                <div class="card" style="margin:10px; width:100%">
+                    <img class="card-img-top" src="/views/img/colores.jpg" alt="KSG">
+                    <div class="card-body">
+                        <h4 class="card-title">Colores</h4>
+                        <p class="card-text">J Balvin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div>
+                <div class="card" style="margin:10px; width:100%">
+                    <img class="card-img-top" src="/views/img/msb.jpg" alt="KSG">
+                    <div class="card-body">
+                        <h4 class="card-title">MAÑANA SERÁ BONITO</h4>
+                        <p class="card-text">KAROL G</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div id="productContainer" class="container" style="width:80%;"></div>
+
+    <script src="../controllers/home.js"></script>-->
+<!--FIN CARTAS-->
+
+<!--INICIO PAGINATION-->
+    <!--<nav aria-label="Pagination">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item active" aria-current="page">
+                <a class="page-link" href="home.html">1</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="P01_cat_A.html">2</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="P01_cat_B.html">3</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>-->
+
+    <!--<nav aria-label="Pagination">
+        <ul id="pagination" class="pagination justify-content-center">
+            <li id="previousPage" class="page-item disabled">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li id="page1" class="page-item active" aria-current="page">
+                <a class="page-link" href="#">1</a>
+            </li>
+            <li id="page2" class="page-item"><a class="page-link" href="#">2</a></li>
+            <li id="page3" class="page-item">
+                <a class="page-link" href="#">3</a>
+            </li>
+            <li id="nextPage" class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>-->
+<!--FIN PAGINATION-->
+x
+<!--INICIO MODAL 0-->
+    <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+        role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">
+                        Iniciar Sesión
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="/action_page.php">
+                        <div class="mb-3 mt-3 input-group" >
+                        <label for="email" class="form-label">Correo</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" required placeholder="Ingresa tu correo">
+                            <i class="fa-solid fa-user" style="margin:10px;"></i>
+                        </div>
+                        </div>
+                        <label for="pwd" class="form-label">Contraseña:</label>
+                        <div class="mb-3 input-group"> 
+                            <input type="password" class="form-control" id="pwd"  required placeholder="Ingresa tu contraseña" name="pswd">
+                            <i class="fa-solid fa-key" style="margin:10px;"></i>
+                        </div>
+                        <div class="form-check mb-3">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="remember">Recordar
+                        </label>
+                        </div>
+                        <div style="text-align: center;">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer" >
+                    <label style="text-align: center;">¿No tienes cuenta?</label>
+                    <a data-bs-toggle="modal" data-bs-target="#modalId1" style="color: blue;">Registrate aqui</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--FIN MODAL 0-->
+
+<!--INICIO MODAL 1-->
+    <div class="modal fade" id="modalId1" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+        role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered  registrarse" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">
+                        Registrarse
+                    </h5>
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col" style="width:50%; margin:10px;">
+                                <input placeholder="Nombre(s)" class="registro form-control" >
+                            </div>
+                            <div class="col" style="width:50%; margin:10px;">
+                                <input placeholder="Apellidos"class="registro form-control">
+                            </div>
+                        </div>
+                        <div class="row" style="width:96%; margin:10px;">
+                            <input placeholder="Tu correo" class="registro form-control">
+                        </div>
+                        <div class="row" style="width:96%; margin:10px; margin-right:20px;">
+                            <input placeholder="Contraseña" class="registro form-control">
+                        </div>
+                        <div class="row" style="width:96%; margin:10px; margin-right:20px;"> 
+                            <input placeholder="Confirmar contraseña" class="registro form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button style="background-color: green; color:white; border-radius:5px; border:0px; padding:5px 10px;">Resgistrarse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--FIN MODAL 1-->
+
+    <script src="../controllers/utils.js"></script>
+    <script src="../controllers/shopping_cart.js"></script>
+    <script src="../controllers/data_handler.js"></script>
+    
+<!--AQUI TERMINA EL CUERPO DE LA PAGINA-->
+    </body>
+</html>
