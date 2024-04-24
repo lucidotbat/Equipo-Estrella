@@ -5,7 +5,20 @@ h1 {
     color: #946609; 
     margin-bottom: 20px; 
 }
-
+h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 28px; 
+    font-weight: bold; 
+    color: #946609; 
+    margin-bottom: 20px; 
+}
+td {
+	padding: 5px 5px 15px 15px;
+	font-size: 18px;
+}
+th {
+	width: 100px;
+}
 .texto {
     font-family: "Playfair Display", serif;
     font-size: 20px; 
@@ -81,6 +94,31 @@ h1 {
 .card .contenido-card a:hover{
 	background: #946609;
 	color: #fff;
+}
+.button-container {
+	display: flex;  
+	justify-content: center;  
+	align-items: center;  
+  }
+.action-button {
+	font-size: 18px;
+	padding: 5px 10px;
+	margin: 20px 0 20px 20px;
+	font-family:Franklin Gothic;
+	color: white;
+	background-color: rgb(38, 51, 54);
+	border-color: rgb(100, 120, 54);
+}
+.ingresos-div1 {
+	display: flex;
+	justify-content: center;
+	margin: 5px 5px 120px 20px;
+  }
+.ingresos-div1 {
+	margin-left: 100px;
+}
+.ingresos-div12 {
+	width: 600px;
 }
 @media only screen and (min-width:320px) and (max-width:768px){
 	.container-card{
