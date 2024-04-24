@@ -15,26 +15,24 @@
     <body>
         <nav class="navbar navbar-expand-md navbar-light" style="background-color: rgb(38, 51, 54);">
             <div class="container-fluid">
-                <img src="https://i.postimg.cc/XYxDCMZd/Logo-Tu-Conta.png" style="width: 150px; height: 50px; padding-left: 30px;">
+                <img src="https://i.postimg.cc/XYxDCMZd/Logo-Tu-Conta.png" style="max-width: 80px; max-height: 80px">
+                <a class="navbar-brand" href="home.html" style="color: white; padding-left: 20px; padding-right: 10px;">Inicio</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="mynavbar">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="home.html" style="color: white; margin-left: 50px; margin-right: 40px; font-size:20px; margin-top: 5px;">Home</a>
+                            <a class="nav-link" href="gastos.html" style="color: white; padding-left: 20px; padding-right: 10px;">Gastos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="gastos.html" style="color: white; margin-left: 40px; margin-right: 40px; font-size:20px; margin-top: 5px;">Gastos</a>
+                            <a class="nav-link" href="ingresos.html" style="color: white; padding-left: 20px; padding-right: 10px;">Ingresos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ingresos.html" style="color: white; margin-left: 40px; margin-right: 40px; font-size:25px; font-weight: bold; font-style: italic;">Ingresos</a>
+                            <a class="nav-link" href="resumen.html" style="color: white; padding-left: 20px; padding-right: 10px;">Resumen</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="reporte.html" style="color: white; margin-left: 40px; margin-right: 40px; font-size:20px; margin-top: 5px;">Reporte</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="fin-de-mes.html" style="color: white; margin-left: 40px; margin-right: 40px; font-size:20px; margin-top: 5px;">Fin de mes</a>
+                            <a class="nav-link" href="fin-de-mes.html" style="color: white; padding-left: 20px; padding-right: 10px;">Fin de mes</a>
                         </li>
                     </ul>
                     <i class="fa-solid fa-user" style="color: white;"></i>
@@ -42,54 +40,54 @@
                 
                     <div class="modal fade"  id="modalId" tabindex="-1" data-bs-backdrop="static"
                     data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
-                        <div
-                            class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
-                            role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="modalTitleId">
-                                        Iniciar Sesión
-                                    </h5>
-                                    <button
-                                        type="button"
-                                        class="btn-close"
-                                        data-bs-dismiss="modal"
-                                        aria-label="Close"
-                                    ></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form action="/action_page.php">
-                                        <div class="mb-3 mt-3 input-group" >
-                                        <label for="email" class="form-label">Correo</label>
-                                        <div class="input-group mb-3">
-                                            <input type="text"   class="form-control" required placeholder="Ingresa tu correo">
-                                            <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
-                                        </div>
-                                        </div>
-                                        <label for="pwd" class="form-label">Contraseña:</label>
-                                        <div class="input-group mb-3">
-                                            <input type="password" class="form-control" id="pwd"  required placeholder="Ingresa tu contraseña" name="pswd">
-                                            <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
-                                        </div>
-                                        <div class="form-check mb-3">
-                                        <label class="form-check-label">
-                                            <input class="form-check-input" type="checkbox" name="remember"> Recordar
-                                        </label>
-                                        </div>
-                                        <div style="text-align: center;">
-                                            <button type="submit" class="btn btn-primary">Login</button>
-                                        </div> 
-                                    </form>
-                                </div>
-                                <div class="modal-footer" >
-                                    <label style="text-align: center;">¿No tienes cuenta?</label>
-                                    
-                                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalId1" style="color: blue;">Registrate aqui</a>
-                                </div>
+                    <div
+                        class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+                        role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalTitleId">
+                                    Iniciar Sesión
+                                </h5>
+                                <button
+                                    type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"
+                                ></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/action_page.php">
+                                    <div class="mb-3 mt-3 input-group" >
+                                      <label for="email" class="form-label">Correo</label>
+                                      <div class="input-group mb-3">
+                                        <input type="text"   class="form-control" required placeholder="Ingresa tu correo">
+                                        <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                                    </div>
+                                    </div>
+                                    <label for="pwd" class="form-label">Contraseña:</label>
+                                    <div class="input-group mb-3">
+                                        <input type="password" class="form-control" id="pwd"  required placeholder="Ingresa tu contraseña" name="pswd">
+                                        <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                      <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" name="remember"> Recordar
+                                      </label>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <button type="submit" class="btn btn-primary">Login</button>
+                                    </div> 
+                                </form>
+                            </div>
+                            <div class="modal-footer" >
+                                <label style="text-align: center;">¿No tienes cuenta?</label>
+                                
+                                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalId1" style="color: blue;">Registrate aqui</a>
                             </div>
                         </div>
                     </div>
-                <div
+                  </div>
+             <div
                     class="modal fade"
                     id="modalId1"
                     tabindex="-1"
@@ -141,12 +139,14 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button class="btn btn-success">Ingresos</button>
+                                <button class="btn btn-success">Registrarse</button>
                             </div>
                             </div>
+                            
                         </div>
                     </div>
-                </div>
+                  </div>
+                  
         </nav>
     </div>
 
