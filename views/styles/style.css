@@ -1,0 +1,13 @@
+body {
+    background-color: #E9E8E8;
+}
+
+.imagenCarousel{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.text1{
+    margin-top: 20px;
+}
