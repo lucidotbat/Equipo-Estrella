@@ -1,0 +1,17 @@
+GET http://localhost:3000/api/gastos
+
+
+###
+POST http://localhost:3000/consultar HTTP/1.1
+Content-Type: application/json 
+
+{
+    "Empresa": "Mi Macro",
+    "Fecha": "9/04/2024",
+    "Concepto": "Hoy me fui en bus",
+    "Cantidad": "9.50",
+    "TipoGasto": "Transporte",
+    "TipoPago": "Semanal"
+}
+
+
