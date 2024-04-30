@@ -1,0 +1,118 @@
+[{
+  "_id": {
+    "$oid": "662c4d518dbd6b52d9f00f21"
+  },
+  "Empresa": "OXXO",
+  "Fecha": "26/04/2024",
+  "Concepto": "Un chesco del oxxo",
+  "Cantidad": 44,
+  "TipoGasto": "Comida",
+  "TipoPago": "Único"
+},
+{
+  "_id": {
+    "$oid": "662c4f3f8dbd6b52d9f00f22"
+  },
+  "Empresa": "Netflix",
+  "Fecha": "20/04/2024",
+  "Concepto": "Paquete básico mensual de netflix",
+  "Cantidad": 139,
+  "TipoGasto": "Entretenimiento",
+  "TipoPago": "Mensual"
+},
+{
+  "_id": {
+    "$oid": "662d481eb2b1257444bcc053"
+  },
+  "Empresa": "Infonavit",
+  "Fecha": "25/01/2023",
+  "Concepto": "Renta de mi depa",
+  "Cantidad": 3500,
+  "TipoGasto": "Alojamiento",
+  "TipoPago": "Mensual",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630454e348d7249e8c8dbf7"
+  },
+  "Empresa": "Hospital Chapalita",
+  "Fecha": "30/04/2024",
+  "Concepto": "Ese dia naci",
+  "Cantidad": 35000,
+  "TipoGasto": "Salud",
+  "TipoPago": "Mensual",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66306b2a1c9ff83b987d2f5c"
+  },
+  "Empresa": "Mi Macro",
+  "Fecha": "10/03/2024",
+  "Concepto": "Hoy me fui en bus",
+  "Cantidad": 9.5,
+  "TipoGasto": "Transporte",
+  "TipoPago": "Semanal",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66306b431c9ff83b987d2f5e"
+  },
+  "Empresa": "Mi Macro",
+  "Fecha": "17/03/2024",
+  "Concepto": "Hoy me fui en bus",
+  "Cantidad": 9.5,
+  "TipoGasto": "Transporte",
+  "TipoPago": "Semanal",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66306d2c1c9ff83b987d2f60"
+  },
+  "Empresa": "Mi Macro",
+  "Fecha": "24/03/2004",
+  "Concepto": "Hoy me fui en bus",
+  "Cantidad": 9.5,
+  "TipoGasto": "Transporte",
+  "TipoPago": "Semanal",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66306d3f1c9ff83b987d2f62"
+  },
+  "Empresa": "Mi Macro",
+  "Fecha": "2/04/2024",
+  "Concepto": "Hoy me fui en bus",
+  "Cantidad": 9.5,
+  "TipoGasto": "Transporte",
+  "TipoPago": "Semanal",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66306d401c9ff83b987d2f64"
+  },
+  "Empresa": "Mi Macro",
+  "Fecha": "2/04/2024",
+  "Concepto": "Hoy me fui en bus",
+  "Cantidad": 9.5,
+  "TipoGasto": "Transporte",
+  "TipoPago": "Semanal",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66306d4d1c9ff83b987d2f66"
+  },
+  "Empresa": "Mi Macro",
+  "Fecha": "9/04/2024",
+  "Concepto": "Hoy me fui en bus",
+  "Cantidad": 9.5,
+  "TipoGasto": "Transporte",
+  "TipoPago": "Semanal",
+  "__v": 0
+}]
