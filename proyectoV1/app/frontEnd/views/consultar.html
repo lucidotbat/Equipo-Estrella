@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Consultar Gastos</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./frontEnd/views/styles/StyleConsultar.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/d9b93ac081.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-light" style="background-color: rgb(38, 51, 54);">
+            <div class="container-fluid">
+                <img src="https://i.postimg.cc/XYxDCMZd/Logo-Tu-Conta.png" style="max-width: 80px; max-height: 80px">
+                <a class="navbar-brand" href="home" style="color: white; padding-left: 20px; padding-right: 10px;">Inicio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="gastos" style="color: white; padding-left: 20px; padding-right: 10px;">Gastos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ingresos" style="color: white; padding-left: 20px; padding-right: 10px;">Ingresos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resumen" style="color: white; padding-left: 20px; padding-right: 10px;">Resumen</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="fin-de-mes" style="color: white; padding-left: 20px; padding-right: 10px;">Fin de mes</a>
+                        </li>
+                    </ul>
+                    <i class="fa-solid fa-user" style="color: white;"></i>
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalId"  style="color: white; padding-left: 20px; padding-right: 10px;">Ingresar</a>
+                
+                    <div class="modal fade"  id="modalId" tabindex="-1" data-bs-backdrop="static"
+                    data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+                    <div
+                        class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+                        role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalTitleId">
+                                    Iniciar Sesión
+                                </h5>
+                                <button
+                                    type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"
+                                ></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/action_page.php">
+                                    <div class="mb-3 mt-3 input-group" >
+                                      <label for="email" class="form-label">Correo</label>
+                                      <div class="input-group mb-3">
+                                        <input type="text"   class="form-control" required placeholder="Ingresa tu correo">
+                                        <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                                    </div>
+                                    </div>
+                                    <label for="pwd" class="form-label">Contraseña:</label>
+                                    <div class="input-group mb-3">
+                                        <input type="password" class="form-control" id="pwd"  required placeholder="Ingresa tu contraseña" name="pswd">
+                                        <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                      <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" name="remember"> Recordar
+                                      </label>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <button type="submit" class="btn btn-primary">Login</button>
+                                    </div> 
+                                </form>
+                            </div>
+                            <div class="modal-footer" >
+                                <label style="text-align: center;">¿No tienes cuenta?</label>
+                                
+                                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalId1" style="color: blue;">Registrate aqui</a>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+             <div
+                    class="modal fade"
+                    id="modalId1"
+                    tabindex="-1"
+                    data-bs-backdrop="static"
+                    data-bs-keyboard="false"
+                    role="dialog"
+                    aria-labelledby="modalTitleId"
+                    aria-hidden="true" >
+                    <div
+                        class="modal-dialog modal-dialog-scrollable modal-dialog-centered  registrarse"
+                        role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalTitleId">
+                                    Registrarse
+                                </h5>
+                                <button
+                                    type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"
+                                ></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input placeholder="Nombre(s)" class="registro form-control" margin:>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input placeholder="Apellidos" class="registro form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <input placeholder="Tu correo" class="registro form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <input type="password" class="form-control" id="pwd"  required placeholder="Ingresa tu contraseña" name="pswd">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <input type="password" class="form-control" id="pwd"  required placeholder="Confirma tu contraseña" name="pswd">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-success">Registrarse</button>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                  </div>
+                  
+        </nav>
+        <nav class="navbar navbar-expand-md navbar-light custom-navbar">
+            <div class="collapse navbar-collapse" id="mynavbar"> 
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="gastos" style="padding-right: 40px;">Nuevo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="consultar" style="padding-right: 40px;">Consultar</a>
+                    </li>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            Ordenar
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">Fecha (más reciente)</a></li>
+                            <li><a class="dropdown-item" href="#">Fecha (más antigua)</a></li>
+                        </ul>
+                    </div>
+                </ul>
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar por empresa" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #0b7a18;"></i></button>
+                </form>
+            </div>
+        </nav>
+        <div id="containerConsultas" class="container-card" style="width:100%;">
+            <div class="row">
+                <!-- <div class="col-lg-4 col-md-6 col-sm-12"> 
+                    <div class="card">
+                        <h1>23/04/2022</h1>
+                        <figure>
+                            <img src="https://i.pinimg.com/564x/a8/30/d5/a830d5ce33d163055920bd028e2f1fa3.jpg"  class="card-img-top img-fluid">
+                        </figure>
+                        <div class="contenido-card">
+                            <h2>Netflix</h2>
+                            <p class="precio">$139</p>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalDetalles1">Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12"> 
+                    <div class="card">
+                        <h1>3/05/2024</h1>
+                        <figure>
+                            <img src="https://i.pinimg.com/564x/55/f8/af/55f8afd0d4c2224653f1ba467b6543e8.jpg"  class="card-img-top img-fluid">
+                        </figure>
+                        <div class="contenido-card">
+                            <h2>Hospital Chapalita</h2>
+                            <p class="precio">$500</p>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalDetalles2">Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12"> 
+                    <div class="card">
+                        <h1>3/05/2024</h1>
+                        <figure>
+                            <img src="https://i.pinimg.com/564x/40/01/26/400126dcd18285f95fbf844fc07c381b.jpg"  class="card-img-top img-fluid">
+                        </figure>
+                        <div class="contenido-card">
+                            <h2>Burger King</h2>
+                            <p class="precio">$230</p>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalDetalles3">Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card">
+                        <h1>3/04/2024</h1>
+                        <figure>
+                            <img src="https://i.pinimg.com/736x/20/28/80/2028800f19993322c590eb3282532190.jpg"  class="card-img-top img-fluid">
+                        </figure>
+                        <div class="contenido-card">
+                            <h2>Mi Macro</h2>
+                            <p class="precio">$9.50</p>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalDetalles4">Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12"> 
+                    <div class="card">
+                        <h1>3/04/2024</h1>
+                        <figure>
+                            <img src="https://i.pinimg.com/564x/11/73/e3/1173e32890c0f9fab846b7218c7f3aa9.jpg"  class="card-img-top img-fluid">
+                        </figure>
+                        <div class="contenido-card">
+                            <h2>Renta Depa</h2>
+                            <p class="precio">$5,000</p>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalDetalles5">Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card">
+                        <h1>3/04/2024</h1>
+                        <figure>
+                            <img src="https://i.pinimg.com/564x/ea/64/30/ea64303d6ac1294ae6b0f64f63e733ba.jpg"  class="card-img-top img-fluid">
+                        </figure>
+                        <div class="contenido-card">
+                            <h2>Luz</h2>
+                            <p class="precio">$800</p>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalDetalles6">Detalles</a>
+                        </div>
+                    </div>
+                </div> -->
+        </div>
+        
+   
+       
+<div class="modal fade" id="modalDetalles1" tabindex="-1" aria-labelledby="modalDetalles1Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalDetalles1Label">Detalles del Gasto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         <h2>Pago de Netflix plan básico</h2>
+         <br>
+         <h5>Tipo de pago: Mensual</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalDetalles2" tabindex="-1" aria-labelledby="modalDetalles1Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalDetalles1Label">Detalles del Gasto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         <h2>Una buena Whopper con queso, unas papas y un chesco</h2>
+         <br>
+         <h5>Tipo de pago: Único</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalDetalles3" tabindex="-1" aria-labelledby="modalDetalles1Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalDetalles1Label">Detalles del Gasto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         <h2>Me andaba mueriendo y fui de urgencias al doc</h2>
+         <br>
+         <h5>Tipo de pago: Único</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalDetalles4" tabindex="-1" aria-labelledby="modalDetalles1Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalDetalles1Label">Detalles del Gasto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         <h2>Me fui en bus a mi chan</h2>
+         <br>
+         <h5>Tipo de pago: Único</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="modalDetalles5" tabindex="-1" aria-labelledby="modalDetalles1Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalDetalles1Label">Detalles del Gasto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         <h2>A pagar la renta de mi chan</h2>
+         <br>
+         <h5>Tipo de pago: Mensual</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+  <div class="modal fade" id="modalDetalles6" tabindex="-1" aria-labelledby="modalDetalles1Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalDetalles1Label">Detalles del Gasto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         <h2>A pagar la luz</h2>
+         <br>
+         <h5>Tipo de pago: Mensual</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../frontEnd/controllersF/consultar.js"></script>
+</body>
+</html>
