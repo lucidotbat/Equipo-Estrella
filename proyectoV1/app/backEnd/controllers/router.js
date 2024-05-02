@@ -9,24 +9,24 @@ router.get('/', (req, res)=>{
     res.sendFile(path.resolve(__dirname, '../../frontEnd/views/home.html'))
 });
 
-router.get('/home', (req, res)=>{
+router.get('/home.html', (req, res)=>{
     res.sendFile(path.resolve(__dirname, '../../frontEnd/views/home.html'))
 });
 
-router.get('/gastos', (req, res)=>{
+router.get('/gastos.html', (req, res)=>{
     res.sendFile(path.resolve(__dirname, '../../frontEnd/views/gastos.html'))
 });
-router.get('/consultar', (req, res)=>{
+router.get('/consultar.html', (req, res)=>{
     res.sendFile(path.resolve(__dirname, '../../frontEnd/views/consultar.html'))
 });
 
-router.get('/ingresos', (req, res)=>{
+router.get('/ingresos.html', (req, res)=>{
     res.sendFile(path.resolve(__dirname, '../../frontEnd/views/ingresos.html'))
 });
-router.get('/fin-de-mes', (req, res)=>{
+router.get('/fin-de-mes.html', (req, res)=>{
     res.sendFile(path.resolve(__dirname, '../../frontEnd/views/fin-de-mes.html'))
 });
-router.get('/resumen', (req, res)=>{
+router.get('/resumen.html', (req, res)=>{
     res.sendFile(path.resolve(__dirname, '../../frontEnd/views/resumen.html'))
 });
 module.exports = router ;

@@ -16,24 +16,26 @@
 <body>
     <nav class="navbar navbar-expand-md navbar-light" style="background-color: rgb(38, 51, 54);">
         <div class="container-fluid">
-            <img src="https://i.postimg.cc/XYxDCMZd/Logo-Tu-Conta.png" style="max-width: 80px; max-height: 80px">
-            <a class="navbar-brand" href="home.html" style="color: white; padding-left: 20px; padding-right: 10px;">Inicio</a>
+            <img src="https://i.postimg.cc/XYxDCMZd/Logo-Tu-Conta.png" style="width: 150px; height: 50px; padding-left: 30px;">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="gastos" style="color: white; padding-left: 20px; padding-right: 10px;">Gastos</a>
+                        <a class="nav-link" href="home.html" style="color: white; margin-left: 50px; margin-right: 40px; font-size:20px; margin-top: 5px;">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="ingresos" style="color: white; padding-left: 20px; padding-right: 10px;">Ingresos</a>
+                        <a class="nav-link" href="gastos.html" style="color: white; margin-left: 40px; margin-right: 40px; font-size:20px; margin-top: 5px;">Gastos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="resumen" style="color: white; padding-left: 20px; padding-right: 10px;">Resumen</a>
+                        <a class="nav-link" href="ingresos.html" style="color: white; margin-left: 40px; margin-right: 40px; font-size:20px; margin-top: 5px;">Ingresos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="fin-de-mes" style="color: white; padding-left: 20px; padding-right: 10px;">Fin de mes</a>
+                        <a class="nav-link" href="resumen.html" style="color: white; margin-left: 40px; margin-right: 40px; font-size:20px; margin-top: 5px;">Reporte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fin-de-mes.html" style="color: white; margin-left: 40px; margin-right: 40px; font-size:25px; font-weight: bold; font-style: italic;">Fin de mes</a>
                     </li>
                 </ul>
                 <i class="fa-solid fa-user" style="color: white;"></i>
@@ -89,65 +91,65 @@
                 </div>
               </div>
          <div
-                class="modal fade"
-                id="modalId1"
-                tabindex="-1"
-                data-bs-backdrop="static"
-                data-bs-keyboard="false"
-                role="dialog"
-                aria-labelledby="modalTitleId"
-                aria-hidden="true" >
-                <div
-                    class="modal-dialog modal-dialog-scrollable modal-dialog-centered  registrarse"
-                    role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="modalTitleId">
-                                Registrarse
-                            </h5>
-                            <button
-                                type="button"
-                                class="btn-close"
-                                data-bs-dismiss="modal"
-                                aria-label="Close"
-                            ></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <input placeholder="Nombre(s)" class="registro form-control" margin:>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input placeholder="Apellidos" class="registro form-control">
-                                    </div>
+            class="modal fade"
+            id="modalId1"
+            tabindex="-1"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            role="dialog"
+            aria-labelledby="modalTitleId"
+            aria-hidden="true" >
+            <div
+                class="modal-dialog modal-dialog-scrollable modal-dialog-centered  registrarse"
+                role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitleId">
+                            Registrarse
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input placeholder="Nombre(s)" class="registro form-control" margin:>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <input placeholder="Tu correo" class="registro form-control">
-                                    </div>
+                                <div class="col-md-6">
+                                    <input placeholder="Apellidos" class="registro form-control">
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <input type="password" class="form-control" id="pwd"  required placeholder="Ingresa tu contraseña" name="pswd">
-                                    </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input placeholder="Tu correo" class="registro form-control">
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <input type="password" class="form-control" id="pwd"  required placeholder="Confirma tu contraseña" name="pswd">
-                                    </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="password" class="form-control" id="pwd"  required placeholder="Ingresa tu contraseña" name="pswd">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="password" class="form-control" id="pwd"  required placeholder="Confirma tu contraseña" name="pswd">
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-success">Registrarse</button>
-                        </div>
-                        </div>
-                        
                     </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-success">Ingresos</button>
+                    </div>
+                    </div>
+                    
                 </div>
-              </div>
-              
+            </div>
+            </div>
+            
     </nav>
     <h1 style="margin-left:20%; margin-top: 20px;">Fin de mes</h1>
     <h2 style="margin-left:15%; margin-top: 20px;">Predicciones de fin de mes:</h2>

@@ -15,24 +15,26 @@
     <body>
         <nav class="navbar navbar-expand-md navbar-light" style="background-color: rgb(38, 51, 54);">
             <div class="container-fluid">
-                <img src="https://i.postimg.cc/XYxDCMZd/Logo-Tu-Conta.png" style="max-width: 80px; max-height: 80px">
-                <a class="navbar-brand" href="home.html" style="color: white; padding-left: 20px; padding-right: 10px;">Inicio</a>
+                <img src="https://i.postimg.cc/XYxDCMZd/Logo-Tu-Conta.png" style="width: 150px; height: 50px; padding-left: 30px;">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="mynavbar">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="gastos" style="color: white; padding-left: 20px; padding-right: 10px;">Gastos</a>
+                            <a class="nav-link" href="home.html" style="color: white; margin-left: 50px; margin-right: 40px; font-size:20px; margin-top: 5px;">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ingresos" style="color: white; padding-left: 20px; padding-right: 10px;">Ingresos</a>
+                            <a class="nav-link" href="gastos.html" style="color: white; margin-left: 40px; margin-right: 40px; font-size:20px; margin-top: 5px;">Gastos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="resumen" style="color: white; padding-left: 20px; padding-right: 10px;">Resumen</a>
+                            <a class="nav-link" href="ingresos.html" style="color: white; margin-left: 40px; margin-right: 40px; font-size:25px; font-weight: bold; font-style: italic;">Ingresos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="fin-de-mes" style="color: white; padding-left: 20px; padding-right: 10px;">Fin de mes</a>
+                            <a class="nav-link" href="resumen.html" style="color: white; margin-left: 40px; margin-right: 40px; font-size:20px; margin-top: 5px;">Reporte</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="fin-de-mes.html" style="color: white; margin-left: 40px; margin-right: 40px; font-size:20px; margin-top: 5px;">Fin de mes</a>
                         </li>
                     </ul>
                     <i class="fa-solid fa-user" style="color: white;"></i>
@@ -40,54 +42,54 @@
                 
                     <div class="modal fade"  id="modalId" tabindex="-1" data-bs-backdrop="static"
                     data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
-                    <div
-                        class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
-                        role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="modalTitleId">
-                                    Iniciar Sesión
-                                </h5>
-                                <button
-                                    type="button"
-                                    class="btn-close"
-                                    data-bs-dismiss="modal"
-                                    aria-label="Close"
-                                ></button>
-                            </div>
-                            <div class="modal-body">
-                                <form action="/action_page.php">
-                                    <div class="mb-3 mt-3 input-group" >
-                                      <label for="email" class="form-label">Correo</label>
-                                      <div class="input-group mb-3">
-                                        <input type="text"   class="form-control" required placeholder="Ingresa tu correo">
-                                        <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
-                                    </div>
-                                    </div>
-                                    <label for="pwd" class="form-label">Contraseña:</label>
-                                    <div class="input-group mb-3">
-                                        <input type="password" class="form-control" id="pwd"  required placeholder="Ingresa tu contraseña" name="pswd">
-                                        <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
-                                    </div>
-                                    <div class="form-check mb-3">
-                                      <label class="form-check-label">
-                                        <input class="form-check-input" type="checkbox" name="remember"> Recordar
-                                      </label>
-                                    </div>
-                                    <div style="text-align: center;">
-                                        <button type="submit" class="btn btn-primary">Login</button>
-                                    </div> 
-                                </form>
-                            </div>
-                            <div class="modal-footer" >
-                                <label style="text-align: center;">¿No tienes cuenta?</label>
-                                
-                                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalId1" style="color: blue;">Registrate aqui</a>
+                        <div
+                            class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+                            role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalTitleId">
+                                        Iniciar Sesión
+                                    </h5>
+                                    <button
+                                        type="button"
+                                        class="btn-close"
+                                        data-bs-dismiss="modal"
+                                        aria-label="Close"
+                                    ></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="/action_page.php">
+                                        <div class="mb-3 mt-3 input-group" >
+                                        <label for="email" class="form-label">Correo</label>
+                                        <div class="input-group mb-3">
+                                            <input type="text"   class="form-control" required placeholder="Escribe tu correo">
+                                            <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                                        </div>
+                                        </div>
+                                        <label for="pwd" class="form-label">Contraseña:</label>
+                                        <div class="input-group mb-3">
+                                            <input type="password" class="form-control" id="pwd"  required placeholder="Escribe tu contraseña" name="pswd">
+                                            <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" name="remember"> Recordar
+                                        </label>
+                                        </div>
+                                        <div style="text-align: center;">
+                                            <button type="submit" class="btn btn-primary">Login</button>
+                                        </div> 
+                                    </form>
+                                </div>
+                                <div class="modal-footer" >
+                                    <label style="text-align: center;">¿No tienes cuenta?</label>
+                                    
+                                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalId1" style="color: blue;">Registrate aqui</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                  </div>
-             <div
+                <div
                     class="modal fade"
                     id="modalId1"
                     tabindex="-1"
@@ -128,7 +130,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <input type="password" class="form-control" id="pwd"  required placeholder="Ingresa tu contraseña" name="pswd">
+                                            <input type="password" class="form-control" id="pwd"  required placeholder="Escribe tu contraseña" name="pswd">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -139,25 +141,22 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button class="btn btn-success">Registrarse</button>
+                                <button class="btn btn-success">Ingresos</button>
                             </div>
                             </div>
-                            
                         </div>
                     </div>
-                  </div>
-                  
+                </div>
         </nav>
     </div>
 
     <h1 style="margin-left:20%; margin-top: 20px;">Ingresos</h1>
     <div class="button-container">
-        <button class="action-button">Agregar ingreso fijo</button>
-        <button class="action-button">Eliminar ingreso fijo</button>
-        <button class="action-button">Editar ingreso fijo</button>
-        <button class="action-button">Agregar ingreso único</button>
+        <button class="action-button" data-bs-toggle="modal" data-bs-target="#modalIngresoFijo">Agregar ingreso fijo</button>
+        <button class="action-button" data-bs-toggle="modal" data-bs-target="#modalIngresoUnico">Agregar ingreso único</button>
     </div>
 
+    <!--
     <div class="ingresos-div1">
         <div class="ingresos-div11">
             <h2 style="margin-top: 20px; width: 600px;">Lista de ingresos mensuales</h1>
@@ -167,32 +166,208 @@
         </div>
         <div class="ingresos-div12">
             <h2 style="margin-top: 20px;">Oportunidades de inversión</h1>
-            <img src="/img/bitcoin.png" style="width: 45%; margin-left: 90px;">
+            <img src="/views/img/bitcoin.png" style="width: 45%; margin-left: 90px;">
         </div>
-    </div>
-    
-    
-    <div class="container">
-        <h1 class="form-title">Nuevo Gasto</h1>
-        <form action="#">
-            <div class="main-user-info">
-                <div class="user-input-box">
-                    <label for="empresa">Titulo</label>
-                    <input type="text" id="empresa" name="empresa" placeholder="En qué empresa se realizó el gasto">
+        </div>
+        -->
+        
+        <!--
+        <div class="container">
+            <h1 class="form-title">Nuevo Gasto</h1>
+            <form action="#">
+                <div class="main-user-info">
+                    <div class="user-input-box">
+                        <label for="empresa">Titulo</label>
+                        <input type="text" id="empresa" name="empresa" placeholder="En qué empresa se realizó el gasto">
+                    </div>
+                    <div class="user-input-box">
+                        <label for="fecha">Cantidad mensual</label>
+                        <input type="text" id="fecha" name="fecha" placeholder="Escribe la fecha">
+                    </div>
+                    <div class="user-input-box">
+                        <label for="concepto">(mas detalles etc)</label>
+                        <input type="text" id="concepto" name="concepto" placeholder="Descripción del gasto">
+                    </div>
+            </div>
+            <div class="form-submit-btn">
+                <input type="submit" value="Agregar">
+            </div>
+            </form>
+        </div>
+        -->
+
+        <div>
+            <table id="incomeTable">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Company</th>
+                        <th>Monthly Income</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Los ingresos se agregaran dinamicamente desde ingresos.js -->
+                </tbody>
+            </table>
+        </div>
+        <script src="scripts/ingresos.js"></script>
+
+        <!-- Modal "Agregar ingreso fijo"-->
+        <div class="modal fade " id="modalIngresoFijo" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleIngresoFijo" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitleIngresoFijo">Agregar ingreso fijo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="tituloIngresoFijo" class="form-label">Descripcion</label>
+                                <input type="text" class="form-control" id="tituloIngresoFijo" placeholder="Escribe la descripcion del ingreso">
+                            </div>
+                            <div class="mb-3">
+                                <label for="tituloIngresoFijo" class="form-label">Compañia</label>
+                                <input type="text" class="form-control" id="tituloIngresoFijo" placeholder="Escribe el nombre de la compañia correspondiente">
+                            </div>
+                            <div class="mb-3">
+                                <label for="tituloIngresoFijo" class="form-label">Cantidad</label>
+                                <input type="number" class="form-control" id="tituloIngresoFijo" placeholder="Escribe el ingreso mensual">
+                            </div>
+                            <div class="mb-3">
+                                <label for="tituloIngresoFijo" class="form-label">Fecha de inicio</label>
+                                <input type="date" class="form-control" id="tituloIngresoFijo" placeholder="Escribe la fecha en que inició este ingreso">
+                            </div>
+                            <div class="mb-3">
+                                <label for="tituloIngresoFijo" class="form-label">Dia del mes de pago</label>
+                                <input type="number" class="form-control" id="tituloIngresoFijo" placeholder="Escribe el día del mes en que recibes el ingreso">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Agregar</button>
+                    </div>
                 </div>
-                <div class="user-input-box">
-                    <label for="fecha">Cantidad mensual</label>
-                    <input type="text" id="fecha" name="fecha" placeholder="Ingresa la fecha">
+            </div>
+        </div>
+
+        <!-- Modal "Eliminar ingreso fijo"-->
+
+        <!-- Modal "Editar ingreso fijo"-->
+
+        <!-- Modal "Agregar ingreso unico"-->
+        <div class="modal fade " id="modalIngresoUnico" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleIngresoFijo" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitleIngresoFijo">Agregar ingreso único</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="tituloIngresoFijo" class="form-label">Descripcion</label>
+                                <input type="text" class="form-control" id="tituloIngresoFijo" placeholder="Escribe la descripcion del ingreso">
+                            </div>
+                            <div class="mb-3">
+                                <label for="tituloIngresoFijo" class="form-label">Compañia</label>
+                                <input type="text" class="form-control" id="tituloIngresoFijo" placeholder="Escribe el nombre de la compañia correspondiente">
+                            </div>
+                            <div class="mb-3">
+                                <label for="tituloIngresoFijo" class="form-label">Cantidad</label>
+                                <input type="number" class="form-control" id="tituloIngresoFijo" placeholder="Escribe el ingreso mensual">
+                            </div>
+                            <div class="mb-3">
+                                <label for="tituloIngresoFijo" class="form-label">Fecha de pago</label>
+                                <input type="date" class="form-control" id="tituloIngresoFijo" placeholder="Escribe la fecha en que recibiste este ingreso">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Agregar</button>
+                    </div>
                 </div>
-                <div class="user-input-box">
-                    <label for="concepto">(mas detalles etc)</label>
-                    <input type="text" id="concepto" name="concepto" placeholder="Descripción del gasto">
+            </div>
+        </div>
+
+        <!-- Modal "Editar ingreso"-->
+        <div class="modal fade" id="modalEditarIngreso" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleEditarIngreso" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitleEditarIngreso">Editar ingreso</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="editarDescripcion" class="form-label">Descripción</label>
+                                <input type="text" class="form-control" id="editarDescripcion" placeholder="Escribe la descripción del ingreso">
+                            </div>
+                            <div class="mb-3">
+                                <label for="editarCompania" class="form-label">Compañía</label>
+                                <input type="text" class="form-control" id="editarCompania" placeholder="Escribe el nombre de la compañía correspondiente">
+                            </div>
+                            <div class="mb-3">
+                                <label for="editarCantidad" class="form-label">Cantidad</label>
+                                <input type="number" class="form-control" id="editarCantidad" placeholder="Escribe el ingreso mensual">
+                            </div>
+                            <div class="mb-3">
+                                <label for="editarFechaInicio" class="form-label">Fecha de inicio</label>
+                                <input type="date" class="form-control" id="editarFechaInicio" placeholder="Escribe la fecha en que inició este ingreso">
+                            </div>
+                            <div class="mb-3">
+                                <label for="editarDiaPago" class="form-label">Día del mes de pago</label>
+                                <input type="number" class="form-control" id="editarDiaPago" placeholder="Escribe el día del mes en que recibes el ingreso">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Guardar cambios</button>
+                    </div>
                 </div>
-          </div>
-          <div class="form-submit-btn">
-            <input type="submit" value="Agregar">
-          </div>
-        </form>
-      </div>
+            </div>
+        </div>
+
+        <!-- Modal "Confirmar eliminación de ingreso"-->
+        <div class="modal fade" id="modalConfirmarEliminar" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleConfirmarEliminar" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitleConfirmarEliminar">Confirmar eliminación</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>¿Estás seguro de que deseas eliminar este ingreso?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-danger">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal "Cancelar eliminación de ingreso"-->
+        <div class="modal fade" id="modalCancelarEliminar" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleCancelarEliminar" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitleCancelarEliminar">Cancelar eliminación</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Has cancelado la eliminación del ingreso.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
