@@ -12,8 +12,6 @@ router.get('/api/gastos', async (req, res) => {
     }
 });
 
-
-
 router.post('/consultar', async (req, res) => {
     try {
         const { Empresa, Fecha, Concepto, Cantidad, TipoGasto, TipoPago } = req.body;

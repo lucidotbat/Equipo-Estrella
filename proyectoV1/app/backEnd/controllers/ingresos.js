@@ -38,7 +38,7 @@ class Ingreso{
     
     set diaDePago(x){
         if((x == null || typeof(x) != 'number') && x > 0 && x < 31)
-            throw new ProductException("Debes ingresar un día válida"); 
+            throw new ProductException("Debes ingresar un día válido"); 
         else
             this.cantidad = x;
     }

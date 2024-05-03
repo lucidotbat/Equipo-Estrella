@@ -196,24 +196,12 @@
         </div>
         -->
 
-        <div>
-            <table id="incomeTable">
-                <thead>
-                    <tr>
-                        <th>Description</th>
-                        <th>Company</th>
-                        <th>Monthly Income</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Los ingresos se agregaran dinamicamente desde ingresos.js -->
-                </tbody>
-            </table>
+        <div id="containerIngresos" class="" style="width:100%;">
+            
         </div>
-        <script src="scripts/ingresos.js"></script>
 
         <!-- Modal "Agregar ingreso fijo"-->
+        <!-- Modal "Editar ingreso"-->
         <div class="modal fade " id="modalIngresoFijo" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleIngresoFijo" aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -224,24 +212,24 @@
                     <div class="modal-body">
                         <form>
                             <div class="mb-3">
-                                <label for="tituloIngresoFijo" class="form-label">Descripcion</label>
-                                <input type="text" class="form-control" id="tituloIngresoFijo" placeholder="Escribe la descripcion del ingreso">
+                                <label for="descripcion" class="form-label">Descripcion</label>
+                                <input type="text" class="form-control" id="descripcion" placeholder="Escribe la descripcion del ingreso">
                             </div>
                             <div class="mb-3">
-                                <label for="tituloIngresoFijo" class="form-label">Compañia</label>
-                                <input type="text" class="form-control" id="tituloIngresoFijo" placeholder="Escribe el nombre de la compañia correspondiente">
+                                <label for="empresa" class="form-label">Empresaa</label>
+                                <input type="text" class="form-control" id="empresa" placeholder="Escribe el nombre de la compañia correspondiente">
                             </div>
                             <div class="mb-3">
-                                <label for="tituloIngresoFijo" class="form-label">Cantidad</label>
-                                <input type="number" class="form-control" id="tituloIngresoFijo" placeholder="Escribe el ingreso mensual">
+                                <label for="cantidad" class="form-label">Cantidad</label>
+                                <input type="number" class="form-control" id="cantidad" placeholder="Escribe el ingreso mensual">
                             </div>
                             <div class="mb-3">
-                                <label for="tituloIngresoFijo" class="form-label">Fecha de inicio</label>
-                                <input type="date" class="form-control" id="tituloIngresoFijo" placeholder="Escribe la fecha en que inició este ingreso">
+                                <label for="fecha" class="form-label">Fecha de inicio</label>
+                                <input type="date" class="form-control" id="fecha" placeholder="Escribe la fecha en que inició este ingreso">
                             </div>
                             <div class="mb-3">
-                                <label for="tituloIngresoFijo" class="form-label">Dia del mes de pago</label>
-                                <input type="number" class="form-control" id="tituloIngresoFijo" placeholder="Escribe el día del mes en que recibes el ingreso">
+                                <label for="dia" class="form-label">Dia del mes de pago</label>
+                                <input type="number" class="form-control" id="dia" placeholder="Escribe el día del mes en que recibes el ingreso">
                             </div>
                         </form>
                     </div>
@@ -268,66 +256,26 @@
                     <div class="modal-body">
                         <form>
                             <div class="mb-3">
-                                <label for="tituloIngresoFijo" class="form-label">Descripcion</label>
-                                <input type="text" class="form-control" id="tituloIngresoFijo" placeholder="Escribe la descripcion del ingreso">
+                                <label for="descripcionUnico" class="form-label">Descripcion</label>
+                                <input type="text" class="form-control" id="descripcionUnico" placeholder="Escribe la descripcion del ingreso">
                             </div>
                             <div class="mb-3">
-                                <label for="tituloIngresoFijo" class="form-label">Compañia</label>
-                                <input type="text" class="form-control" id="tituloIngresoFijo" placeholder="Escribe el nombre de la compañia correspondiente">
+                                <label for="empresaUnico" class="form-label">Empresaa</label>
+                                <input type="text" class="form-control" id="empresaUnico" placeholder="Escribe el nombre de la compañia correspondiente">
                             </div>
                             <div class="mb-3">
-                                <label for="tituloIngresoFijo" class="form-label">Cantidad</label>
-                                <input type="number" class="form-control" id="tituloIngresoFijo" placeholder="Escribe el ingreso mensual">
+                                <label for="cantidadUnico" class="form-label">Cantidad</label>
+                                <input type="number" class="form-control" id="cantidadUnico" placeholder="Escribe el ingreso mensual">
                             </div>
                             <div class="mb-3">
-                                <label for="tituloIngresoFijo" class="form-label">Fecha de pago</label>
-                                <input type="date" class="form-control" id="tituloIngresoFijo" placeholder="Escribe la fecha en que recibiste este ingreso">
+                                <label for="fechaUnico" class="form-label">Fecha de pago</label>
+                                <input type="date" class="form-control" id="fechaUnico" placeholder="Escribe la fecha en que recibiste este ingreso">
                             </div>
                         </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                         <button type="button" class="btn btn-primary">Agregar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal "Editar ingreso"-->
-        <div class="modal fade" id="modalEditarIngreso" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleEditarIngreso" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalTitleEditarIngreso">Editar ingreso</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="mb-3">
-                                <label for="editarDescripcion" class="form-label">Descripción</label>
-                                <input type="text" class="form-control" id="editarDescripcion" placeholder="Escribe la descripción del ingreso">
-                            </div>
-                            <div class="mb-3">
-                                <label for="editarCompania" class="form-label">Compañía</label>
-                                <input type="text" class="form-control" id="editarCompania" placeholder="Escribe el nombre de la compañía correspondiente">
-                            </div>
-                            <div class="mb-3">
-                                <label for="editarCantidad" class="form-label">Cantidad</label>
-                                <input type="number" class="form-control" id="editarCantidad" placeholder="Escribe el ingreso mensual">
-                            </div>
-                            <div class="mb-3">
-                                <label for="editarFechaInicio" class="form-label">Fecha de inicio</label>
-                                <input type="date" class="form-control" id="editarFechaInicio" placeholder="Escribe la fecha en que inició este ingreso">
-                            </div>
-                            <div class="mb-3">
-                                <label for="editarDiaPago" class="form-label">Día del mes de pago</label>
-                                <input type="number" class="form-control" id="editarDiaPago" placeholder="Escribe el día del mes en que recibes el ingreso">
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-primary">Guardar cambios</button>
                     </div>
                 </div>
             </div>
@@ -369,5 +317,7 @@
                 </div>
             </div>
         </div>
+        
+        <script src="../controllersF/ingresos.js"></script>
     </body>
 </html>

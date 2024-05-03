@@ -17,13 +17,13 @@ async function getAllIngresos() {
 async function createIngreso({ descripcion, empresa, ingresoMensual, fechaDeInicio, diaDePago }) {
     try 
     {
-        const nuevoIngreso = new gastosModel({ descripcion, empresa, ingresoMensual, fechaDeInicio, diaDePago });
+        const nuevoIngreso = new ingresosModel({ descripcion, empresa, ingresoMensual, fechaDeInicio, diaDePago });
         await nuevoIngreso.save();
         return nuevoIngreso;
     } 
     catch (error) 
     {
-        console.error('Error al crear el gasto: ', error);
+        console.error('Error al crear el ingreso: ', error);
         throw error;
     }
 }
