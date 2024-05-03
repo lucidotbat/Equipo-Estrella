@@ -156,168 +156,128 @@
         <button class="action-button" data-bs-toggle="modal" data-bs-target="#modalIngresoUnico">Agregar ingreso único</button>
     </div>
 
-    <!--
-    <div class="ingresos-div1">
-        <div class="ingresos-div11">
-            <h2 style="margin-top: 20px; width: 600px;">Lista de ingresos mensuales</h1>
-                <h5>Trabajo 1 ...................................................... $ 14500</h5>
-                <h5>Trabajo 2 ...................................................... $ 3800</h5>
-                <h5>Inversión 1 .................................................... $ 3800</h5>
+    <div style="overflow-x: auto;">
+        <div id="containerIngresos"></div>
+    </div>
+    
+    <!-- Modal "Agregar ingreso fijo"-->
+    <!-- Modal "Editar ingreso"-->
+    <div class="modal fade " id="modalIngresoFijo" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleIngresoFijo" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleIngresoFijo">Agregar ingreso fijo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="descripcionInput" class="form-label">Descripcion</label>
+                            <input type="text" class="form-control" id="descripcionInput" placeholder="Escribe la descripcion del ingreso">
+                        </div>
+                        <div class="mb-3">
+                            <label for="empresaInput" class="form-label">Empresaa</label>
+                            <input type="text" class="form-control" id="empresaInput" placeholder="Escribe el nombre de la compañia correspondiente">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cantidadInput" class="form-label">Cantidad</label>
+                            <input type="number" class="form-control" id="cantidadInput" placeholder="Escribe el ingreso mensual">
+                        </div>
+                        <div class="mb-3">
+                            <label for="fechaInput" class="form-label">Fecha de inicio</label>
+                            <input type="date" class="form-control" id="fechaInput" placeholder="Escribe la fecha en que inició este ingreso">
+                        </div>
+                        <div class="mb-3">
+                            <label for="diaInput" class="form-label">Dia del mes de pago</label>
+                            <input type="number" class="form-control" id="diaInput" placeholder="Escribe el día del mes en que recibes el ingreso">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Agregar</button>
+                </div>
+            </div>
         </div>
-        <div class="ingresos-div12">
-            <h2 style="margin-top: 20px;">Oportunidades de inversión</h1>
-            <img src="/views/img/bitcoin.png" style="width: 45%; margin-left: 90px;">
+    </div>
+
+    <!-- Modal "Eliminar ingreso fijo"-->
+
+    <!-- Modal "Editar ingreso fijo"-->
+
+    <!-- Modal "Agregar ingreso unico"-->
+    <div class="modal fade " id="modalIngresoUnico" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleIngresoFijo" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleIngresoFijo">Agregar ingreso único</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="descripcionUnico" class="form-label">Descripcion</label>
+                            <input type="text" class="form-control" id="descripcionUnico" placeholder="Escribe la descripcion del ingreso">
+                        </div>
+                        <div class="mb-3">
+                            <label for="empresaUnico" class="form-label">Empresaa</label>
+                            <input type="text" class="form-control" id="empresaUnico" placeholder="Escribe el nombre de la compañia correspondiente">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cantidadUnico" class="form-label">Cantidad</label>
+                            <input type="number" class="form-control" id="cantidadUnico" placeholder="Escribe el ingreso mensual">
+                        </div>
+                        <div class="mb-3">
+                            <label for="fechaUnico" class="form-label">Fecha de pago</label>
+                            <input type="date" class="form-control" id="fechaUnico" placeholder="Escribe la fecha en que recibiste este ingreso">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Agregar</button>
+                </div>
+            </div>
         </div>
+    </div>
+
+    <!-- Modal "Confirmar eliminación de ingreso"-->
+    <div class="modal fade" id="modalConfirmarEliminar" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleConfirmarEliminar" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleConfirmarEliminar">Confirmar eliminación</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>¿Estás seguro de que deseas eliminar este ingreso?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger">Eliminar</button>
+                </div>
+            </div>
         </div>
-        -->
+    </div>
+
+    <!-- Modal "Cancelar eliminación de ingreso"-->
+    <div class="modal fade" id="modalCancelarEliminar" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleCancelarEliminar" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleCancelarEliminar">Cancelar eliminación</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Has cancelado la eliminación del ingreso.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
         
-        <!--
-        <div class="container">
-            <h1 class="form-title">Nuevo Gasto</h1>
-            <form action="#">
-                <div class="main-user-info">
-                    <div class="user-input-box">
-                        <label for="empresa">Titulo</label>
-                        <input type="text" id="empresa" name="empresa" placeholder="En qué empresa se realizó el gasto">
-                    </div>
-                    <div class="user-input-box">
-                        <label for="fecha">Cantidad mensual</label>
-                        <input type="text" id="fecha" name="fecha" placeholder="Escribe la fecha">
-                    </div>
-                    <div class="user-input-box">
-                        <label for="concepto">(mas detalles etc)</label>
-                        <input type="text" id="concepto" name="concepto" placeholder="Descripción del gasto">
-                    </div>
-            </div>
-            <div class="form-submit-btn">
-                <input type="submit" value="Agregar">
-            </div>
-            </form>
-        </div>
-        -->
-
-        <div id="containerIngresos" class="" style="width:100%;">
-            
-        </div>
-
-        <!-- Modal "Agregar ingreso fijo"-->
-        <!-- Modal "Editar ingreso"-->
-        <div class="modal fade " id="modalIngresoFijo" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleIngresoFijo" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalTitleIngresoFijo">Agregar ingreso fijo</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="mb-3">
-                                <label for="descripcion" class="form-label">Descripcion</label>
-                                <input type="text" class="form-control" id="descripcion" placeholder="Escribe la descripcion del ingreso">
-                            </div>
-                            <div class="mb-3">
-                                <label for="empresa" class="form-label">Empresaa</label>
-                                <input type="text" class="form-control" id="empresa" placeholder="Escribe el nombre de la compañia correspondiente">
-                            </div>
-                            <div class="mb-3">
-                                <label for="cantidad" class="form-label">Cantidad</label>
-                                <input type="number" class="form-control" id="cantidad" placeholder="Escribe el ingreso mensual">
-                            </div>
-                            <div class="mb-3">
-                                <label for="fecha" class="form-label">Fecha de inicio</label>
-                                <input type="date" class="form-control" id="fecha" placeholder="Escribe la fecha en que inició este ingreso">
-                            </div>
-                            <div class="mb-3">
-                                <label for="dia" class="form-label">Dia del mes de pago</label>
-                                <input type="number" class="form-control" id="dia" placeholder="Escribe el día del mes en que recibes el ingreso">
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-primary">Agregar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal "Eliminar ingreso fijo"-->
-
-        <!-- Modal "Editar ingreso fijo"-->
-
-        <!-- Modal "Agregar ingreso unico"-->
-        <div class="modal fade " id="modalIngresoUnico" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleIngresoFijo" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalTitleIngresoFijo">Agregar ingreso único</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="mb-3">
-                                <label for="descripcionUnico" class="form-label">Descripcion</label>
-                                <input type="text" class="form-control" id="descripcionUnico" placeholder="Escribe la descripcion del ingreso">
-                            </div>
-                            <div class="mb-3">
-                                <label for="empresaUnico" class="form-label">Empresaa</label>
-                                <input type="text" class="form-control" id="empresaUnico" placeholder="Escribe el nombre de la compañia correspondiente">
-                            </div>
-                            <div class="mb-3">
-                                <label for="cantidadUnico" class="form-label">Cantidad</label>
-                                <input type="number" class="form-control" id="cantidadUnico" placeholder="Escribe el ingreso mensual">
-                            </div>
-                            <div class="mb-3">
-                                <label for="fechaUnico" class="form-label">Fecha de pago</label>
-                                <input type="date" class="form-control" id="fechaUnico" placeholder="Escribe la fecha en que recibiste este ingreso">
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-primary">Agregar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal "Confirmar eliminación de ingreso"-->
-        <div class="modal fade" id="modalConfirmarEliminar" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleConfirmarEliminar" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalTitleConfirmarEliminar">Confirmar eliminación</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>¿Estás seguro de que deseas eliminar este ingreso?</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-danger">Eliminar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal "Cancelar eliminación de ingreso"-->
-        <div class="modal fade" id="modalCancelarEliminar" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleCancelarEliminar" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalTitleCancelarEliminar">Cancelar eliminación</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Has cancelado la eliminación del ingreso.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <script src="../controllersF/ingresos.js"></script>
+    <script src="../frontEnd/controllersF/ingresos.js"></script>
     </body>
 </html>

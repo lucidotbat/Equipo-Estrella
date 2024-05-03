@@ -13,7 +13,6 @@ async function getAllIngresos() {
     }
 }
 
-
 async function createIngreso({ descripcion, empresa, ingresoMensual, fechaDeInicio, diaDePago }) {
     try 
     {

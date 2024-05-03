@@ -1,3 +1,9 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 h1 {
     font-family: "Playfair Display", serif;
     font-size: 36px; 
@@ -5,6 +11,7 @@ h1 {
     color: #946609; 
     margin-bottom: 20px; 
 }
+
 h2 {
     font-family: "Playfair Display", serif;
     font-size: 28px; 
@@ -12,13 +19,16 @@ h2 {
     color: #946609; 
     margin-bottom: 20px; 
 }
+
 td {
 	padding: 5px 5px 15px 15px;
 	font-size: 18px;
 }
+
 th {
 	width: 100px;
 }
+
 .texto {
     font-family: "Playfair Display", serif;
     font-size: 20px; 
@@ -137,6 +147,25 @@ th {
 
 .ingresos-div12 {
 	width: 600px;
+}
+
+#containerIngresos {
+	display: flex;
+	justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+#containerIngresos table {
+    border-collapse: collapse;
+}
+
+#containerIngresos table th,
+#containerIngresos table td {
+    padding: 8px 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 @media only screen and (min-width:320px) and (max-width:768px){
