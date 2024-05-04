@@ -174,11 +174,12 @@
             <!-- The slideshow/carousel -->
             <div class="carousel-inner" style="height: 50cap; padding-left: 20cap;">
                 <div class="carousel-item active" style="height: 50cap;">
-                    <canvas id="myChart1" style="width:100%;max-width:700px"></canvas>
-                
+                    <canvas id="myChart1" style="width:200%;max-width:1400px;"></canvas>
+                    <button style="border-color: white;" onclick="info('Esta tabla muestra el dinero gastado en cada empresa')"><img style="height: 2cap; " src="https://www.freeiconspng.com/thumbs/info-icon/info-icon-32.png"></button>
                 </div>
                 <div class="carousel-item" >
-                    <canvas id="veces tienda" style="width:100%;max-width:700px"></canvas>
+                    <canvas id="veces tienda" style="width:200%;max-width:1400px;"></canvas>
+                    <button style="border-color: white;" onclick="info('Esta tabla muestra la cantidad de veces en las que se ha comprado en cada tienda')"><img style="height: 2cap;" src="https://www.freeiconspng.com/thumbs/info-icon/info-icon-32.png"></button>
                 </div>  
             </div>
 
@@ -191,11 +192,10 @@
             </button>
         </div>
     </div>
-    <h1 style="padding-left: 5cap;">tiendas</h1>
+    <h1 style="padding-left: 5cap;">Gastos generales</h1>
     <div id="graficas tiendas">
         <canvas id="graph"></canvas>
         <div id="demo1" class="carousel slide" data-bs-ride="carousel">
-
             <!-- Indicators/dots -->
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#demo1" data-bs-slide-to="0" class="active"></button>
@@ -205,10 +205,13 @@
             <!-- The slideshow/carousel -->
             <div class="carousel-inner" style="height: 50cap; ; padding-left: 20cap;">
                 <div class="carousel-item active" style="height: 50cap;">
-                <canvas id="gasto en fechas" style="width:100%;max-width:700px;"></canvas>
+                    
+                    <canvas id="gasto en fechas" style="width:200%;max-width:1400px;"></canvas>
+                    <button style="border-color: white;" onclick="info('cantidad de dinero gastado por mes')"><img style="height: 2cap;" src="https://www.freeiconspng.com/thumbs/info-icon/info-icon-32.png"></button>
                 </div>
                 <div class="carousel-item" >
-                <canvas id="gasto en tipos" style="width:100%;max-width:700px;"></canvas>
+                    <canvas id="gasto en tipos" style="width:200%;max-width:1400px;"></canvas>
+                    <button style="border-color: white;" onclick="info('cantidad de dinero gastado en los tipos de gasto')"><img style="height: 2cap;" src="https://www.freeiconspng.com/thumbs/info-icon/info-icon-32.png"></button>
                 </div>
             </div>
     
@@ -235,7 +238,7 @@
             <div class="col-3">
                 empresa
             </div>
-            <div class="col-3">
+            <div class="col-2">
                 concepto
             </div>
             <div class="col-2">
@@ -248,6 +251,10 @@
                 <button onclick="cambio(1)">^</button>
                 <button onclick="cambio(0)">v</button>
             </div>
+            <div class="col-1">
+                <button  style="border-color: grey;" onclick="info('tabla de las 5 ultimas compras mas recientes')"><img src="https://www.freeiconspng.com/thumbs/info-icon/info-icon-32.png" style="height: 2cap; border-color: grey; background-color: grey;"></button>
+            </div>
+            
         </div>
         <div id="tabla"></div>
         
@@ -343,6 +350,6 @@
     </div>
 <!--FIN MODAL 1-->
 
-    <script src="../frontEnd/controllersF/resumen.js"></script>
+    <script src="../frontEnd/controllersF/reporte.js"></script>
     </body>
 </html>
