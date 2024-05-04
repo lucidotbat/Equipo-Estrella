@@ -218,3 +218,6 @@ function mostrartabla(){
     }
 }
 
+function info(mensaje){
+    alert(mensaje);
+}
