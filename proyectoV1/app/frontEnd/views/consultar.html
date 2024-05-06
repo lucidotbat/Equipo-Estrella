@@ -22,19 +22,19 @@
                 <div class="collapse navbar-collapse" id="mynavbar">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="home.html" style="color: white; margin-left: 50px; margin-right: 40px; font-size:20px; margin-top: 5px;">Home</a>
+                            <a class="nav-link" href="home" style="color: white; margin-left: 50px; margin-right: 40px; font-size:25px; color: white; font-weight: bold; font-style: italic;">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="gastos.html" style="color: white; margin-left: 40px; margin-right: 40px; font-size:25px; font-weight: bold; font-style: italic;">Gastos</a>
+                            <a class="nav-link" href="gastos" style="color: white; margin-left: 40px; margin-right: 40px; font-size:20px; margin-top: 5px;">Gastos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ingresos.html" style="color: white; margin-left: 40px; margin-right: 40px; font-size:20px; margin-top: 5px;">Ingresos</a>
+                            <a class="nav-link" href="ingresos" style="color: white; margin-left: 40px; margin-right: 40px; font-size:20px; margin-top: 5px;">Ingresos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="resumen.html" style="color: white; margin-left: 40px; margin-right: 40px; font-size:20px; margin-top: 5px;">Reporte</a>
+                            <a class="nav-link" href="resumen" style="color: white; margin-left: 40px; margin-right: 40px; font-size:20px; margin-top: 5px;">Reporte</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="fin-de-mes.html" style="color: white; margin-left: 40px; margin-right: 40px; font-size:20px; margin-top: 5px;">Fin de mes</a>
+                            <a class="nav-link" href="fin-de-mes" style="color: white; margin-left: 40px; margin-right: 40px; font-size:20px; margin-top: 5px;">Fin de mes</a>
                         </li>
                     </ul>
                     <i class="fa-solid fa-user" style="color: white;"></i>
@@ -77,7 +77,7 @@
                                       </label>
                                     </div>
                                     <div style="text-align: center;">
-                                        <button type="submit" class="btn btn-primary">Login</button>
+                                        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
                                     </div> 
                                 </form>
                             </div>
@@ -90,91 +90,97 @@
                     </div>
                   </div>
              <div
-                class="modal fade"
-                id="modalId1"
-                tabindex="-1"
-                data-bs-backdrop="static"
-                data-bs-keyboard="false"
-                role="dialog"
-                aria-labelledby="modalTitleId"
-                aria-hidden="true" >
-                <div
-                    class="modal-dialog modal-dialog-scrollable modal-dialog-centered  registrarse"
-                    role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="modalTitleId">
-                                Registrarse
-                            </h5>
-                            <button
-                                type="button"
-                                class="btn-close"
-                                data-bs-dismiss="modal"
-                                aria-label="Close"
-                            ></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <input placeholder="Nombre(s)" class="registro form-control" margin:>
+                    class="modal fade"
+                    id="modalId1"
+                    tabindex="-1"
+                    data-bs-backdrop="static"
+                    data-bs-keyboard="false"
+                    role="dialog"
+                    aria-labelledby="modalTitleId"
+                    aria-hidden="true" >
+                    <div
+                        class="modal-dialog modal-dialog-scrollable modal-dialog-centered  registrarse"
+                        role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalTitleId">
+                                    Registrarse
+                                </h5>
+                                <button
+                                    type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"
+                                ></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input placeholder="Nombre(s)" class="registro form-control" margin:>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input placeholder="Apellidos" class="registro form-control">
+                                        </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <input placeholder="Apellidos" class="registro form-control">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <input placeholder="Tu correo" class="registro form-control">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <input placeholder="Tu correo" class="registro form-control">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <input type="password" class="form-control" id="pwd"  required placeholder="Ingresa tu contraseña" name="pswd">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <input type="password" class="form-control" id="pwd"  required placeholder="Ingresa tu contraseña" name="pswd">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <input type="password" class="form-control" id="pwd"  required placeholder="Confirma tu contraseña" name="pswd">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <input type="password" class="form-control" id="pwd"  required placeholder="Confirma tu contraseña" name="pswd">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-success">Registrarse</button>
+                            </div>
+                            </div>
+                            
                         </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-success">Registrarse</button>
-                        </div>
-                        </div>
-                        
                     </div>
+                  </div>
+                  
+        </nav>
+        <div class="navbar-container">
+            <nav class="navbar navbar-expand-md navbar-light custom-navbar">
+                <div class="collapse navbar-collapse" id="mynavbar"> 
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" class="cA" href="gastos" style="padding-right: 40px;  margin-left: 40px; margin-right: 40px; font-size:20px; margin-top: 5px;">Nuevo</a>
+                        </li>
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="consultar" style="padding-right: 40px;  margin-left: 40px; margin-right: 40px; font-size:20px; margin-top: 5px;">Consultar</a>
+                        </li>
+                        <li class="nav-item dropdown"> <!-- Agregar la clase dropdown al elemento li -->
+                            <a class="nav-link dropdown-toggle" href="#" id="ordenarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="padding-right: 40px;  margin-left: 40px; margin-right: 40px; font-size:20px; margin-top: 5px;">
+                                Ordenar
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="ordenarDropdown"> <!-- Mantener el mismo markup del menú desplegable -->
+                                <li><a class="dropdown-item" id="ordenarReciente" href="#">Fecha (más reciente)</a></li>
+                                <li><a class="dropdown-item" id="ordenarAntiguo" href="#">Fecha (más antigua)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+        
+                    <form class="d-flex align-items-center">
+                        <input class="form-control me-2" type="search" id="inputFilter" placeholder="Buscar por empresa" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit" id="search"><i class="fa-solid fa-magnifying-glass" style="color: #0b7a18;"></i></button>
+                    </form>
                 </div>
-                </div>   
-        </nav>
-        <nav class="navbar navbar-expand-md navbar-light custom-navbar">
-            <div class="collapse navbar-collapse" id="mynavbar"> 
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="gastos.html" style="padding-right: 40px;">Nuevo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="consultar.html" style="padding-right: 40px;">Consultar</a>
-                    </li>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                            Ordenar
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="#">Fecha (más reciente)</a></li>
-                            <li><a class="dropdown-item" href="#">Fecha (más antigua)</a></li>
-                        </ul>
-                    </div>
-                </ul>
-
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Buscar por empresa" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #0b7a18;"></i></button>
-                </form>
-            </div>
-        </nav>
+            </nav>
+        </div>
+        
+        
+        
         <div id="containerConsultas" class="container-card" style="width:100%;">
             <div class="row">
                 <!-- <div class="col-lg-4 col-md-6 col-sm-12"> 
@@ -259,7 +265,7 @@
         
    
        
-<div class="modal fade" id="modalDetalles1" tabindex="-1" aria-labelledby="modalDetalles1Label" aria-hidden="true">
+<!-- <div class="modal fade" id="modalDetalles1" tabindex="-1" aria-labelledby="modalDetalles1Label" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -354,7 +360,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <script src="../frontEnd/controllersF/consultar.js"></script>
 </body>
 </html>
