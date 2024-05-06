@@ -150,7 +150,7 @@
         </nav>
     </div>
 
-    <h1 style="margin-left:20%; margin-top: 20px;">Ingresos</h1>
+    <h1 style="display: flex; justify-content: center; margin-top: 20px;">Ingresos</h1>
     <div class="button-container">
         <button class="action-button" data-bs-toggle="modal" data-bs-target="#modalIngresoFijo">Agregar ingreso fijo</button>
         <button class="action-button" data-bs-toggle="modal" data-bs-target="#modalIngresoUnico">Agregar ingreso único</button>
@@ -161,7 +161,6 @@
     </div>
     
     <!-- Modal "Agregar ingreso fijo"-->
-    <!-- Modal "Editar ingreso"-->
     <div class="modal fade " id="modalIngresoFijo" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleIngresoFijo" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -176,7 +175,7 @@
                             <input type="text" class="form-control" id="descripcionInput" placeholder="Escribe la descripcion del ingreso">
                         </div>
                         <div class="mb-3">
-                            <label for="empresaInput" class="form-label">Empresaa</label>
+                            <label for="empresaInput" class="form-label">Empresa</label>
                             <input type="text" class="form-control" id="empresaInput" placeholder="Escribe el nombre de la compañia correspondiente">
                         </div>
                         <div class="mb-3">
@@ -195,15 +194,70 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">Agregar</button>
+                    <button type="button" class="btn btn-primary" style="background-color:rgb(38, 51, 54);border-color:rgb(100, 120, 54)">Agregar</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal "Eliminar ingreso fijo"-->
+    <!-- Modal "Editar ingreso"-->
+    <div class="modal fade " id="modalEditarIngreso" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleIngresoFijo" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleIngresoFijo">Editar ingreso fijo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="editarDescripcion" class="form-label">Descripcion</label>
+                            <input type="text" class="form-control" id="editarDescripcion" placeholder="Escribe la descripcion del ingreso">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editarEmpresa" class="form-label">Empresa</label>
+                            <input type="text" class="form-control" id="editarEmpresa" placeholder="Escribe el nombre de la compañia correspondiente">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editarCantidad" class="form-label">Cantidad</label>
+                            <input type="number" class="form-control" id="editarCantidad" placeholder="Escribe el ingreso mensual">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editarFecha" class="form-label">Fecha de inicio</label>
+                            <input type="date" class="form-control" id="editarFecha" placeholder="Escribe la fecha en que inició este ingreso">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editarDia" class="form-label">Dia del mes de pago</label>
+                            <input type="number" class="form-control" id="editarDia" placeholder="Escribe el día del mes en que recibes el ingreso">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="editarIngresoBtn" style="background-color:rgb(38, 51, 54);border-color:rgb(100, 120, 54)">Editar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- Modal "Editar ingreso fijo"-->
+    <!-- Modal "Eliminar ingreso"-->
+    <div class="modal fade" id="modalEliminarIngreso" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleEliminarIngreso" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleEliminarIngreso">Eliminar ingreso</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>¿Estás seguro de que deseas eliminar este ingreso?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger" id="eliminarIngresoId" style="background-color:darkred">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal "Agregar ingreso unico"-->
     <div class="modal fade " id="modalIngresoUnico" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleIngresoFijo" aria-hidden="true">
@@ -235,44 +289,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">Agregar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal "Confirmar eliminación de ingreso"-->
-    <div class="modal fade" id="modalConfirmarEliminar" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleConfirmarEliminar" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalTitleConfirmarEliminar">Confirmar eliminación</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>¿Estás seguro de que deseas eliminar este ingreso?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-danger">Eliminar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal "Cancelar eliminación de ingreso"-->
-    <div class="modal fade" id="modalCancelarEliminar" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleCancelarEliminar" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalTitleCancelarEliminar">Cancelar eliminación</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Has cancelado la eliminación del ingreso.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                    <button type="button" class="btn btn-primary" style="background-color:rgb(38, 51, 54);border-color:rgb(100, 120, 54)">Agregar</button>
                 </div>
             </div>
         </div>
