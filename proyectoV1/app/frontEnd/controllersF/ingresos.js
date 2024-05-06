@@ -62,19 +62,28 @@ async function displayIngresos() {
             const accionesCell = document.createElement('td');
 
             const editarButton = document.createElement('button');
+            editarButton.style = 'background-color:rgb(38, 51, 54);border-color:rgb(100, 120, 54)'
             editarButton.textContent = 'Editar';
             editarButton.classList.add('btn', 'btn-primary', 'btn-sm', 'me-2');
             editarButton.addEventListener('click', () => {
-                // Lógica para editar el ingreso
-                console.log('Editar ingreso:', ingreso);
+                cargarDatosEditarIngreso(ingreso);
+                const modal = document.getElementById('modalEditarIngreso');
+                const modalInstance = new bootstrap.Modal(modal);
+                modalInstance.show();
+                const editarIngresoBtn = document.getElementById('editarIngresoBtn');
+                editarIngresoBtn.addEventListener('click', () => editarIngreso(ingreso._id));
+                console.log('Abriendo modal de edición');
             });
 
             const eliminarButton = document.createElement('button');
+            eliminarButton.style = 'background-color:darkred;'
             eliminarButton.textContent = 'Eliminar';
             eliminarButton.classList.add('btn', 'btn-danger', 'btn-sm');
             eliminarButton.addEventListener('click', () => {
-                // Lógica para eliminar el ingreso
-                console.log('Eliminar ingreso:', ingreso);
+                establecerIngresoEliminar(ingreso._id);
+                const modal = document.getElementById('modalEliminarIngreso');
+                const modalInstance = new bootstrap.Modal(modal);
+                modalInstance.show();
             });
 
             accionesCell.appendChild(editarButton);
@@ -83,6 +92,8 @@ async function displayIngresos() {
 
             tbody.appendChild(row);
         });
+
+        document.getElementById('editarIngresoBtn').addEventListener('click', editarIngreso);
 
         table.appendChild(tbody);
         containerIngresos.appendChild(table);
@@ -116,7 +127,7 @@ async function agregarIngreso() {
             body: JSON.stringify(nuevoIngreso)
         });
 
-        if (response.ok) {
+        if(response.ok) {
             // El ingreso se agregó correctamente
             console.log('Ingreso agregado');
             // Actualizar la lista de ingresos en la página
@@ -126,13 +137,96 @@ async function agregarIngreso() {
             const modalInstance = bootstrap.Modal.getInstance(modal);
             modalInstance.hide();
             location.reload(true);
-        } else {
+        } 
+        else
             console.error('Error al agregar el ingreso');
-        }
-    } catch (error) {
+    } 
+    catch(error) {
         console.error('Error al agregar el ingreso:', error);
     }
 }
 
-// Call the function to display income data when the page loads
+// Función para manejar la edición de un ingreso
+async function editarIngreso(ingresoId) {
+    const descripcion = document.getElementById('editarDescripcion').value;
+    const empresa = document.getElementById('editarEmpresa').value;
+    const ingresoMensual = document.getElementById('editarCantidad').value;
+    const fechaDeInicio = document.getElementById('editarFecha').value;
+    const diaDePago = document.getElementById('editarDia').value;
+
+    const ingresoActualizado = {
+        descripcion,
+        empresa,
+        ingresoMensual,
+        fechaDeInicio,
+        diaDePago
+    };
+
+    try {
+        const response = await fetch(`http://localhost:3000/api/ingresos/${ingresoId}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(ingresoActualizado)
+        });
+
+        if(response.ok) {
+            console.log('Ingreso actualizado');
+            displayIngresos();
+            
+            const modal = document.getElementById('modalEditarIngreso');
+            const modalInstance = bootstrap.Modal.getInstance(modal);
+            modalInstance.hide();
+            location.reload(true);
+        } 
+        else 
+            console.error('Error al actualizar el ingreso');
+    } 
+    catch (error) {
+        console.error('Error al actualizar el ingreso:', error);
+    }
+}
+
+async function eliminarIngreso() {
+    const ingresoId = document.getElementById('eliminarIngresoId').value;
+
+    try 
+    {
+        const response = await fetch(`http://localhost:3000/api/ingresos/${ingresoId}`, {
+            method: 'DELETE'
+        });
+
+        if (response.ok) 
+        {
+            console.log('Ingreso eliminado');
+            displayIngresos();
+            
+            const modal = document.getElementById('modalEliminarIngreso');
+            const modalInstance = bootstrap.Modal.getInstance(modal);
+            modalInstance.hide();
+            location.reload(true);
+        } else
+            console.error('Error al eliminar el ingreso');
+    } 
+    catch(error) {
+        console.error('Error al eliminar el ingreso:', error);
+    }
+}
+
+document.getElementById('editarIngresoBtn').addEventListener('click', editarIngreso);
+
+function cargarDatosEditarIngreso(ingreso) {
+    document.getElementById('editarDescripcion').value = ingreso.descripcion;
+    document.getElementById('editarEmpresa').value = ingreso.empresa;
+    document.getElementById('editarCantidad').value = ingreso.ingresoMensual;
+    document.getElementById('editarFecha').value = ingreso.fechaDeInicio;
+    document.getElementById('editarDia').value = ingreso.diaDePago;
+}
+
+function establecerIngresoEliminar(ingresoId) {
+    document.getElementById('eliminarIngresoId').value = ingresoId;
+}
+
 window.addEventListener('DOMContentLoaded', displayIngresos);
+document.getElementById('eliminarIngresoId').addEventListener('click', eliminarIngreso);
