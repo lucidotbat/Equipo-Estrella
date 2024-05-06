@@ -151,10 +151,16 @@
             </div>
             
     </nav>
-    <h1 style="margin-left:20%; margin-top: 20px;">Fin de mes</h1>
-    <h2 style="margin-left:15%; margin-top: 20px;">Predicciones de fin de mes:</h2>
-    <img src="/img/tabla1.png" style="height:400px; margin-left: 100px;">
-    <h5 style="margin-left: 100px;">Mes de abril</h5>
+    <h1 style="display: flex; justify-content: center; margin-top: 20px;">Fin de mes</h1>
+    <h2 style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;" id="mes-actual"></h2>
 
+    <h4 style="display: flex; justify-content: center; margin-top: 10px;">Total de Ingresos: $<span id="sumaIngresos"></span></h4>
+    <h4 style="display: flex; justify-content: center; margin-top: 10px;">Total de Gastos: $<span id="sumaGastos"></span></h4>
+    <h4 style="display: flex; justify-content: center; margin-top: 10px;">Balance: $<span id="diferencia"></span></h4>
+    <h3 style="display: flex; justify-content: center; margin-top: 10px;"><span id="resultado"></span></h3>
+
+    <div id="contenedor" style="display: flex; justify-content: center; margin-top: 40px;"></div>
+    
+    <script src="../frontEnd/controllersF/fin-de-mes.js"></script>
 </body>
 </html>
