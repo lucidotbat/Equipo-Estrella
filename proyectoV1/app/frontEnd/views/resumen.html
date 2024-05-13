@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Resumen/title>
+        <title>Home</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./frontEnd/views/styles/StyleWEB.css">
@@ -29,19 +29,19 @@
         <div class="collapse navbar-collapse" id="mynavbar">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="home" style="color: white; margin-left: 50px; margin-right: 40px; font-size:20px; margin-top: 5px;">Home</a>
+                    <a class="nav-link" href="home.html" style="color: white; margin-left: 50px; margin-right: 40px; font-size:20px; margin-top: 5px;">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="gastos" style="color: white; margin-left: 40px; margin-right: 40px; font-size:20px; margin-top: 5px;">Gastos</a>
+                    <a class="nav-link" href="gastos.html" style="color: white; margin-left: 40px; margin-right: 40px; font-size:20px; margin-top: 5px;">Gastos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="ingresos" style="color: white; margin-left: 40px; margin-right: 40px; font-size:20px; margin-top: 5px;">Ingresos</a>
+                    <a class="nav-link" href="ingresos.html" style="color: white; margin-left: 40px; margin-right: 40px; font-size:20px; margin-top: 5px;">Ingresos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="resumen" style="color: white; margin-left: 40px; margin-right: 40px; font-size:25px; font-weight: bold; font-style: italic;">Reporte</a>
+                    <a class="nav-link" href="resumen.html" style="color: white; margin-left: 40px; margin-right: 40px; font-size:25px; font-weight: bold; font-style: italic;">Reporte</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="fin-de-mes" style="color: white; margin-left: 40px; margin-right: 40px; font-size:20px; margin-top: 5px;">Fin de mes</a>
+                    <a class="nav-link" href="fin-de-mes.html" style="color: white; margin-left: 40px; margin-right: 40px; font-size:20px; margin-top: 5px;">Fin de mes</a>
                 </li>
             </ul>
             <i class="fa-solid fa-user" style="color: white;"></i>
@@ -84,7 +84,7 @@
                               </label>
                             </div>
                             <div style="text-align: center;">
-                                <button type="submit" class="btn btn-primary">Inicia Sesión</button>
+                                <button type="submit" class="btn btn-primary">Login</button>
                             </div> 
                         </form>
                     </div>
@@ -161,69 +161,17 @@
 <!--FIN NAVBAR-->
 
     <h1 style="padding-left: 2cap ;">Reporte</h1>
-    <h1 style="padding-left: 5cap;">Gastos por tiendas</h1>
-    <div id="graficas generales">
-        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+    <div class="btn-group" style="position: absolute; right:0;">
+        <button type="button" onclick="cambiodeestilo(1)" class="btn btn-primary" style="background-color: white;"><img src="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/512x512/plain/table.png" style="max-width: 2cap;"></button>
+        <button type="button"  onclick="cambiodeestilo(0)" class="btn btn-primary" style="background-color: white;" ><img src="https://cdn-icons-png.flaticon.com/512/710/710086.png" style="max-width: 2cap;"></button>
+    </div> 
+    <div id="estilo">
 
-            <!-- Indicators/dots -->
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-              <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-              <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-            </div>
-            <!-- The slideshow/carousel -->
-            <div class="carousel-inner" style="height: 50cap; padding-left: 20cap;">
-                <div class="carousel-item active" style="height: 50cap;">
-                    <canvas id="myChart1" style="width:200%;max-width:1400px;"></canvas>
-                    <button style="border-color: white;" onclick="info('Esta tabla muestra el dinero gastado en cada empresa')"><img style="height: 2cap; " src="https://www.freeiconspng.com/thumbs/info-icon/info-icon-32.png"></button>
-                </div>
-                <div class="carousel-item" >
-                    <canvas id="veces tienda" style="width:200%;max-width:1400px;"></canvas>
-                    <button style="border-color: white;" onclick="info('Esta tabla muestra la cantidad de veces en las que se ha comprado en cada tienda')"><img style="height: 2cap;" src="https://www.freeiconspng.com/thumbs/info-icon/info-icon-32.png"></button>
-                </div>  
-            </div>
-
-            <!-- Left and right controls/icons -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
-        </div>
     </div>
-    <h1 style="padding-left: 5cap;">Gastos generales</h1>
-    <div id="graficas tiendas">
-        <canvas id="graph"></canvas>
-        <div id="demo1" class="carousel slide" data-bs-ride="carousel">
-            <!-- Indicators/dots -->
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#demo1" data-bs-slide-to="0" class="active"></button>
-              <button type="button" data-bs-target="#demo1" data-bs-slide-to="1"></button>
-              <button type="button" data-bs-target="#demo1" data-bs-slide-to="2"></button>
-            </div>
-            <!-- The slideshow/carousel -->
-            <div class="carousel-inner" style="height: 50cap; ; padding-left: 20cap;">
-                <div class="carousel-item active" style="height: 50cap;">
-                    
-                    <canvas id="gasto en fechas" style="width:200%;max-width:1400px;"></canvas>
-                    <button style="border-color: white;" onclick="info('cantidad de dinero gastado por mes')"><img style="height: 2cap;" src="https://www.freeiconspng.com/thumbs/info-icon/info-icon-32.png"></button>
-                </div>
-                <div class="carousel-item" >
-                    <canvas id="gasto en tipos" style="width:200%;max-width:1400px;"></canvas>
-                    <button style="border-color: white;" onclick="info('cantidad de dinero gastado en los tipos de gasto')"><img style="height: 2cap;" src="https://www.freeiconspng.com/thumbs/info-icon/info-icon-32.png"></button>
-                </div>
-            </div>
+
+  
+        
     
-            <!-- Left and right controls/icons -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#demo1" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#demo1" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
-        </div>
-    </div>
     <h1 style="padding-left: 5cap;">tabla de gastos totales</h1>
     
     <a>
