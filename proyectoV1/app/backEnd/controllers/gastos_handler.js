@@ -11,11 +11,11 @@ async function getAllGastos() {
 }
 
 
-async function createGasto({ Empresa, Fecha, Concepto, Cantidad, TipoGasto, TipoPago }) {
+async function createGasto({ User, Empresa, Fecha, Concepto, Cantidad, TipoGasto, TipoPago }) {
     try {
         
         // Crear un nuevo gasto utilizando los datos proporcionados
-        const nuevoGasto = new gastosModel({ Empresa, Fecha, Concepto, Cantidad, TipoGasto, TipoPago });
+        const nuevoGasto = new gastosModel({ User, Empresa, Fecha, Concepto, Cantidad, TipoGasto, TipoPago });
         await nuevoGasto.save();
         return nuevoGasto;
     } catch (error) {
